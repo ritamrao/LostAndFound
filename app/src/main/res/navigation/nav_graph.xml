@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lostandfound.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_createAdvertFragment"
+            app:destination="@id/createAdvertFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_itemsListFragment"
+            app:destination="@id/itemsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAdvertFragment"
+        android:name="com.example.lostandfound.ui.fragment.CreateAdvertFragment"
+        android:label="fragment_create_advert"
+        tools:layout="@layout/fragment_create_advert" />
+    <fragment
+        android:id="@+id/itemsListFragment"
+        android:name="com.example.lostandfound.ui.fragment.ItemsListFragment"
+        android:label="fragment_items_list"
+        tools:layout="@layout/fragment_items_list" >
+        <action
+            android:id="@+id/action_itemsListFragment_to_removeItemFragment"
+            app:destination="@id/removeItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/removeItemFragment"
+        android:name="com.example.lostandfound.ui.fragment.RemoveItemFragment"
+        android:label="fragment_remove_item"
+        tools:layout="@layout/fragment_remove_item" />
+</navigation>
